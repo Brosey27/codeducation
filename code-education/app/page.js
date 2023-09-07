@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Image from "next/image";
 import frontend from "../public/Frontend.webp";
-
+import Link from "next/link";
 import curriculum from "../public/curriculum.svg";
 
 export default function Home() {
@@ -75,11 +75,17 @@ const [nav, setNav] = useState(true);
       </div>
       </div>
       {/* Curriculum */}
-      <div className="text-violet-300 mt-[-150px]">
+      <div className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           <h1 className='text-gra-300 md:text-4xl sm:text-6xl text-4xl font-bold md:py-6'>Curriculum</h1>
-          <Image alt="curriculum2" src={curriculum} className='w-[500px] mx-auto my-4' />
+          <Link href="/curriculum">
+  
+    <Image alt="curriculum2" src={curriculum} className="w-[500px] mx-auto my-4" />
+  
+</Link>
+          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>The Internet</h1>
+          <p className='text-md'>Lets start with the basics of the internet. by clicking the image above, you will learn: How the internet works, what is HTTP, what is a domain name, what is hosting, what is DNS/how it works and how browsers work.</p>
           </div>
           </div>
     </main>
