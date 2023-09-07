@@ -79,13 +79,45 @@ const [nav, setNav] = useState(true);
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           <h1 className='text-gra-300 md:text-4xl sm:text-6xl text-4xl font-bold md:py-6'>Curriculum</h1>
-          <Link href="/curriculum">
-  
-    <Image alt="curriculum2" src={curriculum} className="w-[500px] mx-auto my-4" />
-  
-</Link>
+         
+              <Image alt="curriculum2" src={curriculum} className="w-[500px] mx-auto my-4" />
+          
           <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>The Internet</h1>
-          <p className='text-md'>Lets start with the basics of the internet. by clicking the image above, you will learn: How the internet works, what is HTTP, what is a domain name, what is hosting, what is DNS/how it works and how browsers work.</p>
+          <p className='text-md'>Lets start with the basics of the internet. by clicking the buttons below, you will learn: How the internet works, what is HTTP, what is a domain name, what is hosting, what is DNS/how it works and how browsers work.</p>
+          <div className="flex flex-wrap justify-center">
+  <a href="https://cs.fyi/guide/how-does-internet-work" className="mx-2 my-2">
+    <button className="bg-blue-400 w-[200px] rounded-md font-medium py-3 text-white">
+      Internet
+    </button>
+  </a>
+  <a href="https://cs.fyi/guide/http-in-depth" className="mx-2 my-2">
+    <button className="bg-blue-400 w-[200px] rounded-md font-medium py-3 text-white">
+      HTTP
+    </button>
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name" className="mx-2 my-2">
+    <button className="bg-blue-400 w-[200px] rounded-md font-medium py-3 text-white">
+      Domain Names 
+    </button>
+  </a>
+</div>
+<div className="flex flex-wrap justify-center">
+  <a href="https://www.youtube.com/watch?v=htbY9-yggB0" className="mx-2 my-2">
+    <button className="bg-blue-400 w-[200px] rounded-md font-medium py-3 text-white">
+      Hosting
+    </button>
+  </a>
+  <a href="https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/" className="mx-2 my-2">
+    <button className="bg-blue-400 w-[200px] rounded-md font-medium py-3 text-white">
+      DNS
+    </button>
+  </a>
+  <a href="https://web.dev/howbrowserswork/" className="mx-2 my-2">
+    <button className="bg-blue-400 w-[200px] rounded-md font-medium py-3 text-white">
+      Browsers
+    </button>
+  </a>
+</div>
           </div>
           </div>
     </main>
