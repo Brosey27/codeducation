@@ -6,6 +6,7 @@ import Image from "next/image";
 import frontend from "../public/Frontend.webp";
 import Link from "next/link";
 import curriculum from "../public/curriculum.svg";
+import HTML from "../public/HTML.svg";
 
 export default function Home() {
 const [nav, setNav] = useState(true);
@@ -74,11 +75,11 @@ const [nav, setNav] = useState(true);
         <Image alt="aboutimage" src={frontend} className='w-[300px] mx-auto my-4' />
       </div>
       </div>
-      {/* Curriculum */}
+      {/* Learn about the internet */}
       <div className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
-          <h1 className='text-gra-300 md:text-4xl sm:text-6xl text-4xl font-bold md:py-6'>Curriculum</h1>
+          
          
               <Image alt="curriculum2" src={curriculum} className="w-[500px] mx-auto my-4" />
           
@@ -117,6 +118,55 @@ const [nav, setNav] = useState(true);
       Browsers
     </button>
   </a>
+</div>
+          </div>
+          </div>
+          {/* Learn about HTML */}
+          <div className="text-white mt-[-150px]">
+          <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+            
+          
+         
+              <Image alt="HTML2" src={HTML} className="w-[500px] mx-auto my-4" />
+          
+          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>HTML</h1>
+          <p className='text-md'>HTML stands for HyperText Markup Language. It is used on the frontend and gives the structure to the webpage which you can style using CSS and make interactive using JavaScript.
+
+Visit the following resources to learn more:</p>
+          <div className="flex flex-wrap justify-center">
+  <a href="https://www.w3schools.com/html/html_intro.asp" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      HTML Basics
+    </button>
+  </a>
+  <a href="https://cs.fyi/guide/writing-semantic-html" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      Semantic HTML
+    </button>
+  </a>
+  <a href="https://www.w3schools.com/js/js_validation.asp" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      Forms/Validations
+    </button>
+  </a>
+</div>
+<div className="flex flex-wrap justify-center">
+  <a href="https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      Accessibility
+    </button>
+  </a>
+  <a href="https://www.youtube.com/watch?v=xsVTqzratPs" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      SEO Basics
+    </button>
+  </a>
+  <a href="https://htmlcheatsheet.com/" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      HTML Cheatsheet
+    </button>
+  </a>
+  
 </div>
           </div>
           </div>
