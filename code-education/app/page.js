@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Image from "next/image";
-import frontend from "../public/Frontend.webp"
+import frontend from "../public/Frontend.webp";
+
+import curriculum from "../public/curriculum.svg";
 
 export default function Home() {
 const [nav, setNav] = useState(true);
@@ -64,7 +66,7 @@ const [nav, setNav] = useState(true);
           </ul>
         </div>
       </div>
-      {/* About */}
+      {/* Hero */}
       <div className="text-white">
           <div className="maxw-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
         <h1 className='text-gra-300 md:text-4xl sm:text-6xl text-4xl font-bold md:py-6'>A Guide to Front-End Development</h1>
@@ -72,6 +74,14 @@ const [nav, setNav] = useState(true);
         <Image alt="aboutimage" src={frontend} className='w-[300px] mx-auto my-4' />
       </div>
       </div>
+      {/* Curriculum */}
+      <div className="text-violet-300 mt-[-150px]">
+          <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+            
+          <h1 className='text-gra-300 md:text-4xl sm:text-6xl text-4xl font-bold md:py-6'>Curriculum</h1>
+          <Image alt="curriculum2" src={curriculum} className='w-[500px] mx-auto my-4' />
+          </div>
+          </div>
     </main>
 );
 }
