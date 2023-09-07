@@ -7,6 +7,7 @@ import frontend from "../public/Frontend.webp";
 import Link from "next/link";
 import curriculum from "../public/curriculum.svg";
 import HTML from "../public/HTML.svg";
+import CSS from "../public/css.svg";
 
 export default function Home() {
 const [nav, setNav] = useState(true);
@@ -168,6 +169,38 @@ Visit the following resources to learn more:</p>
   </a>
   
 </div>
+          </div>
+          </div>
+          {/* Learn about CSS */}
+          <div className="text-white mt-[-150px]">
+          <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+            
+          
+         
+              <Image alt="CSS2" src={CSS} className="w-[500px] mx-auto mt-96" />
+          
+          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>CSS</h1>
+          <p className='text-md'>CSS or Cascading Style Sheets is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+
+Visit the following resources to learn more:</p>
+          <div className="flex flex-wrap justify-center">
+  <a href="https://web.dev/learn/css/" className="mx-2 my-2">
+    <button className="bg-white w-[200px] rounded-md font-medium py-3 text-blue-600">
+      CSS Basics
+    </button>
+  </a>
+  <a href="https://www.simplilearn.com/tutorials/css-tutorial/css-grid-vs-flexbox" className="mx-2 my-2">
+    <button className="bg-white w-[200px] rounded-md font-medium py-3 text-blue-600">
+      Making Layouts
+    </button>
+  </a>
+  <a href="https://kinsta.com/blog/responsive-web-design/" className="mx-2 my-2">
+    <button className="bg-white w-[200px] rounded-md font-medium py-3 text-blue-600">
+      Responsive Web Design
+    </button>
+  </a>
+</div>
+
           </div>
           </div>
     </main>
