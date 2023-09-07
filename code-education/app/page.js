@@ -8,6 +8,7 @@ import Link from "next/link";
 import curriculum from "../public/curriculum.svg";
 import HTML from "../public/HTML.svg";
 import CSS from "../public/css.svg";
+import JS from "../public/Javascript.png";
 
 export default function Home() {
 const [nav, setNav] = useState(true);
@@ -197,6 +198,38 @@ Visit the following resources to learn more:</p>
   <a href="https://kinsta.com/blog/responsive-web-design/" className="mx-2 my-2">
     <button className="bg-white w-[200px] rounded-md font-medium py-3 text-blue-600">
       Responsive Web Design
+    </button>
+  </a>
+</div>
+
+          </div>
+          </div>
+          {/* Learn about JS */}
+          <div className="text-white mt-[-150px]">
+          <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+            
+          
+         
+              <Image alt="CSS2" src={JS} className="w-[500px] mx-auto mt-96" />
+          
+          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Javascript</h1>
+          <p className='text-md'>JavaScript allows you to add interactivity to your pages. Common examples that you may have seen on the websites are sliders, click interactions, popups and so on.
+
+Visit the following resources to learn more:</p>
+          <div className="flex flex-wrap justify-center">
+  <a href="https://javascript.info/" className="mx-2 my-2">
+    <button className="bg-yellow-500 w-[200px] rounded-md font-medium py-3 text-white">
+      JS Basics
+    </button>
+  </a>
+  <a href="https://www.youtube.com/watch?v=0ik6X4DJKCc" className="mx-2 my-2">
+    <button className="bg-yellow-500 w-[200px] rounded-md font-medium py-3 text-white">
+      DOM Manipulation
+    </button>
+  </a>
+  <a href="https://www.javascripttutorial.net/javascript-fetch-api/" className="mx-2 my-2">
+    <button className="bg-yellow-500 w-[200px] rounded-md font-medium py-3 text-white">
+      Fetch API
     </button>
   </a>
 </div>
