@@ -16,6 +16,8 @@ import CSSFRAME from "../public/cssframe.png";
 import CSSPRE from "../public/csspre.svg";
 import TYPE from "../public/type.svg";
 import SSR from "../public/SSR.png";
+import QL from "../public/graphql.webp";
+import PERFORM from "../public/performance.svg";
 
 export default function Home() {
 const [nav, setNav] = useState(true);
@@ -29,24 +31,13 @@ const [nav, setNav] = useState(true);
       {/* Nav */}
       <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
         <h1 className="w-full text-2xl font-bold text-purple-300">Codeducation.</h1>
-        <ul className="hidden md:flex">
-          <a href="#">
-            <li className="p-4">Home</li>
-          </a>
-          <a href="#">
-            <li className="p-4">Company</li>
-          </a>
-          <a href="#">
-            <li className="p-4">Resources</li>
-          </a>
-          <a href="#">
-            <li className="p-4">About</li>
-          </a>
-          <a href="#">
-            <li className="p-4">Contact</li>
-          </a>
-        </ul>
-        <div onClick={handleNav} className="block">
+       
+        <div
+        className={`fixed top-0 right-0 z-50 p-4 cursor-pointer ${
+          !nav ? "bg-[#000300]" : "" // Add background color if needed
+        }`}
+        onClick={handleNav}
+      >
           {nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
         </div>
         <div
@@ -58,14 +49,17 @@ const [nav, setNav] = useState(true);
         >
           <h1 className="w-full text-2xl font-bold text-purple-300 m-4">Codeducation.</h1>
           <ul className="uppercase p-4">
-            <a href="#">
-              <li className="p-4 border-b border-gray-600">Home</li>
+          <a href="#internet">
+              <li className="p-4 border-b border-gray-600">Internet</li>
             </a>
-            <a href="#">
-              <li className="p-4 border-b border-gray-600">Company</li>
+            <a href="#HTML">
+              <li className="p-4 border-b border-gray-600">HTML</li>
             </a>
-            <a href="#">
-              <li className="p-4 border-b border-gray-600">Resources</li>
+            <a href="#CSS">
+              <li className="p-4 border-b border-gray-600">CSS</li>
+            </a>
+            <a href="#JAVA">
+              <li className="p-4 border-b border-gray-600">JavaScript</li>
             </a>
             <a href="#">
               <li className="p-4 border-b border-gray-600">About</li>
@@ -85,15 +79,15 @@ const [nav, setNav] = useState(true);
       </div>
       </div>
       {/* Learn about the internet */}
-      <div className="text-white mt-[-150px]">
+      <div id="internet" className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
          
               <Image alt="curriculum2" src={curriculum} className="w-[500px] mx-auto my-4" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>The Internet</h1>
-          <p className='text-md'>Lets start with the basics of the internet. by clicking the buttons below, you will learn: How the internet works, what is HTTP, what is a domain name, what is hosting, what is DNS/how it works and how browsers work.</p>
+          <h1 className=' md:text-3xl lg:text-4xl text-2xl font-bold md:py-6'>The Internet</h1>
+          <p className='text-md '>Lets start with the basics of the internet. by clicking the buttons below, you will learn: How the internet works, what is HTTP, what is a domain name, what is hosting, what is DNS/how it works and how browsers work.</p>
           <div className="flex flex-wrap justify-center">
   <a href="https://cs.fyi/guide/how-does-internet-work" className="mx-2 my-2">
     <button className="bg-blue-400 w-[200px] rounded-md font-medium py-3 text-white">
@@ -132,7 +126,7 @@ const [nav, setNav] = useState(true);
           </div>
           {/* Learn about HTML */}
           <div className="text-white mt-[-150px]">
-          <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+          <div id="HTML" className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
          
@@ -180,7 +174,7 @@ Visit the following resources to learn more:</p>
           </div>
           </div>
           {/* Learn about CSS */}
-          <div className="text-white mt-[-150px]">
+          <div id="CSS" className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
@@ -193,17 +187,17 @@ Visit the following resources to learn more:</p>
 Visit the following resources to learn more:</p>
           <div className="flex flex-wrap justify-center">
   <a href="https://web.dev/learn/css/" className="mx-2 my-2">
-    <button className="bg-white w-[200px] rounded-md font-medium py-3 text-blue-600">
+    <button className="bg-blue-500 w-[200px] rounded-md font-medium py-3 text-white">
       CSS Basics
     </button>
   </a>
   <a href="https://www.simplilearn.com/tutorials/css-tutorial/css-grid-vs-flexbox" className="mx-2 my-2">
-    <button className="bg-white w-[200px] rounded-md font-medium py-3 text-blue-600">
+    <button className="bg-blue-500 w-[200px] rounded-md font-medium py-3 text-white">
       Making Layouts
     </button>
   </a>
   <a href="https://kinsta.com/blog/responsive-web-design/" className="mx-2 my-2">
-    <button className="bg-white w-[200px] rounded-md font-medium py-3 text-blue-600">
+    <button className="bg-blue-500 w-[200px] rounded-md font-medium py-3 text-white">
       Responsive Web Design
     </button>
   </a>
@@ -212,7 +206,7 @@ Visit the following resources to learn more:</p>
           </div>
           </div>
           {/* Learn about JS */}
-          <div className="text-white mt-[-150px]">
+          <div id="JAVA" className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
@@ -431,28 +425,108 @@ Visit the following resources to learn more:</p>
          
               <Image alt="CSS2" src={SSR} className="w-[500px] mx-auto mt-96" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Server Side Rendering or SSR</h1>
+          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Server Side Rendering</h1>
           <p className='text-md'>Server-side rendering refers to the process that the service side completes the HTML structure splicing of the page, sends it to the browser, and then binds the status and events for it to become a fully interactive page.
 
 Visit the following resources to learn more:</p>
           <div className="flex flex-wrap justify-center">
   <a href="https://www.educative.io/answers/what-is-server-side-rendering" className="mx-2 my-2">
-    <button className="bg-violet-500 w-[200px] rounded-md font-medium py-3 text-white">
+    <button className="bg-blue-800 w-[200px] rounded-md font-medium py-3 text-white">
       What is SSR?
     </button>
   </a>
   <a href="https://masteringnextjs.com/" className="mx-2 my-2">
-    <button className="bg-violet-500 w-[200px] rounded-md font-medium py-3 text-white">
+    <button className="bg-blue-800 w-[200px] rounded-md font-medium py-3 text-white">
       Next.js
     </button>
   </a>
   <a href="https://remix.run/" className="mx-2 my-2">
-    <button className="bg-violet-500 w-[200px] rounded-md font-medium py-3 text-white">
+    <button className="bg-blue-800 w-[200px] rounded-md font-medium py-3 text-white">
       Remix
     </button>
   </a>
 </div>
 
+          </div>
+          </div>
+          {/* Learn GraphQL */}
+          <div className="text-white mt-[-150px]">
+          <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+            
+          
+         
+              <Image alt="CSS2" src={QL} className="w-[400px] mx-auto mt-96" />
+          
+          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>GraphQL</h1>
+          <p className='text-md'>GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
+
+Visit the following resources to learn more:</p>
+          <div className="flex flex-wrap justify-center">
+  <a href="https://graphql.org/learn/" className="mx-2 my-2">
+    <button className="bg-pink-700 w-[200px] rounded-md font-medium py-3 text-white">
+      GraphQL Basics
+    </button>
+  </a>
+  <a href="https://www.youtube.com/watch?v=YyUWW04HwKY" className="mx-2 my-2">
+    <button className="bg-pink-700 w-[200px] rounded-md font-medium py-3 text-white">
+      Apollo
+    </button>
+  </a>
+  <a href="https://relay.dev/docs/" className="mx-2 my-2">
+    <button className="bg-pink-700 w-[200px] rounded-md font-medium py-3 text-white">
+      Relay
+    </button>
+  </a>
+</div>
+
+          </div>
+          </div>
+          {/* Learn Progressive web Apps */}
+          <div className="text-white mt-[-150px]">
+          <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+            
+          
+         
+              <Image alt="HTML2" src={PERFORM} className="w-[500px] mx-auto mt-96" />
+          
+          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Performance Best Practices</h1>
+          <p className='text-md'>Use these resources to calculate, measure and improve your websites performance:
+</p>
+          <div className="flex flex-wrap justify-center">
+  <a href="https://roadmap.sh/best-practices/frontend-performance" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      Performance Basics
+    </button>
+  </a>
+  <a href="https://developer.chrome.com/docs/devtools/" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      DevTools
+    </button>
+  </a>
+  <a href="https://developer.chrome.com/docs/lighthouse/overview/" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      Lighthouse
+    </button>
+  </a>
+</div>
+<div className="flex flex-wrap justify-center">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      Performance Metrics
+    </button>
+  </a>
+  <a href="https://web.dev/rail/" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      RAIL Model
+    </button>
+  </a>
+  <a href="https://web.dev/apply-instant-loading-with-prpl/" className="mx-2 my-2">
+    <button className="bg-orange-500 w-[200px] rounded-md font-medium py-3 text-white">
+      PRPL Pattern
+    </button>
+  </a>
+  
+</div>
           </div>
           </div>
     </main>
