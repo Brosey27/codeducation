@@ -6,8 +6,8 @@ import Image from "next/image";
 import frontend from "../public/Frontend.webp";
 import Link from "next/link";
 import curriculum from "../public/curriculum.svg";
-import HTML from "../public/HTML.svg";
-import CSS from "../public/css.svg";
+import HTML from "../public/HTML.webp";
+import CSS from "../public/CSS.png";
 import JS from "../public/Javascript.png";
 import GIT from "../public/git.png";
 import PM from  "../public/packagemanager.svg";
@@ -61,11 +61,32 @@ const [nav, setNav] = useState(true);
             <a href="#JAVA">
               <li className="p-4 border-b border-gray-600">JavaScript</li>
             </a>
-            <a href="#">
-              <li className="p-4 border-b border-gray-600">About</li>
+            <a href="#GIT">
+              <li className="p-4 border-b border-gray-600">Git/GitHub</li>
             </a>
-            <a href="#">
-              <li className="p-4">Contact</li>
+            <a href="#PM">
+              <li className="p-4 border-b border-gray-600">Package Managers</li>
+            </a>
+            <a href="#FRAME">
+              <li className="p-4 border-b border-gray-600">Frameworks</li>
+            </a>
+            <a href="#CSSFRAME">
+              <li className="p-4 border-b border-gray-600">CSS Framworks</li>
+            </a>
+            <a href="#CSSPRE">
+              <li className="p-4 border-b border-gray-600">CSS Preprocessors</li>
+            </a>
+            <a href="#TYPE">
+              <li className="p-4 border-b border-gray-600">Type Checkers</li>
+            </a>
+            <a href="#SSR">
+              <li className="p-4 border-b border-gray-600">SSR</li>
+            </a>
+            <a href="#GRAPH">
+              <li className="p-4 border-b border-gray-600">GraphQL</li>
+            </a>
+            <a href="#PBP">
+              <li className="p-4">PBP's</li>
             </a>
           </ul>
         </div>
@@ -75,16 +96,19 @@ const [nav, setNav] = useState(true);
           <div className="maxw-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
         <h1 className='text-gra-300 md:text-4xl sm:text-6xl text-4xl font-bold md:py-6'>A Guide to Front-End Development</h1>
         <p className='md:text-2xl sm:text-4xl text-xl font-bold py-4'>This guide will take you through each aspect of front-end development.</p>
-        <Image alt="aboutimage" src={frontend} className='w-[300px] mx-auto my-4' />
+        <Image alt="aboutimage" src={frontend} className='w-[500px] mx-auto my-4' />
       </div>
       </div>
+
+      {/* Curriculum */}
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
       {/* Learn about the internet */}
       <div id="internet" className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
          
-              <Image alt="curriculum2" src={curriculum} className="w-[500px] mx-auto my-4" />
+              <Image alt="curriculum2" src={curriculum} className="w-[500px] mx-auto mt-96" />
           
           <h1 className=' md:text-3xl lg:text-4xl text-2xl font-bold md:py-6'>The Internet</h1>
           <p className='text-md '>Lets start with the basics of the internet. by clicking the buttons below, you will learn: How the internet works, what is HTTP, what is a domain name, what is hosting, what is DNS/how it works and how browsers work.</p>
@@ -126,11 +150,11 @@ const [nav, setNav] = useState(true);
           </div>
           {/* Learn about HTML */}
           <div className="text-white mt-[-150px]">
-          <div id="HTML" className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+          <div  className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
          
-              <Image alt="HTML2" src={HTML} className="w-[500px] mx-auto my-4" />
+              <Image id="HTML" alt="HTML2" src={HTML} className="w-[500px] mx-auto mt-96" />
           
           <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>HTML</h1>
           <p className='text-md'>HTML stands for HyperText Markup Language. It is used on the frontend and gives the structure to the webpage which you can style using CSS and make interactive using JavaScript.
@@ -174,12 +198,12 @@ Visit the following resources to learn more:</p>
           </div>
           </div>
           {/* Learn about CSS */}
-          <div id="CSS" className="text-white mt-[-150px]">
+          <div  className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
          
-              <Image alt="CSS2" src={CSS} className="w-[500px] mx-auto mt-96" />
+              <Image id="CSS" alt="CSS2" src={CSS} className="w-[500px] mx-auto mt-96" />
           
           <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>CSS</h1>
           <p className='text-md'>CSS or Cascading Style Sheets is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
@@ -206,15 +230,15 @@ Visit the following resources to learn more:</p>
           </div>
           </div>
           {/* Learn about JS */}
-          <div id="JAVA" className="text-white mt-[-150px]">
+          <div  className="text-white mt-[-150px]">
           <div className="maxw-[800px] w-full h-screen mx-auto text-center flex flex-col justify-center">
             
           
          
-              <Image alt="CSS2" src={JS} className="w-[500px] mx-auto mt-96" />
+              <Image id="JAVA" alt="CSS2" src={JS} className="w-[500px] mx-auto mt-96" />
           
           <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Javascript</h1>
-          <p className='text-md'>JavaScript allows you to add interactivity to your pages. Common examples that you may have seen on the websites are sliders, click interactions, popups and so on.
+          <p  className='text-md'>JavaScript allows you to add interactivity to your pages. Common examples that you may have seen on the websites are sliders, click interactions, popups and so on.
 
 Visit the following resources to learn more:</p>
           <div className="flex flex-wrap justify-center">
@@ -229,7 +253,7 @@ Visit the following resources to learn more:</p>
     </button>
   </a>
   <a href="https://www.javascripttutorial.net/javascript-fetch-api/" className="mx-2 my-2">
-    <button className="bg-yellow-500 w-[200px] rounded-md font-medium py-3 text-white">
+    <button  className="bg-yellow-500 w-[200px] rounded-md font-medium py-3 text-white">
       Fetch API
     </button>
   </a>
@@ -243,10 +267,10 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={GIT} className="w-[500px] mx-auto mt-96" />
+              <Image id="GIT" alt="CSS2" src={GIT} className="w-[500px] mx-auto mt-96" />
           
           <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Git/GitHub</h1>
-          <p className='text-md'>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+          <p  className='text-md'>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 Visit the following resources to learn more:</p>
           <div className="flex flex-wrap justify-center">
@@ -275,7 +299,7 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={PM} className="w-[500px] mx-auto mt-96" />
+              <Image id="PM" alt="CSS2" src={PM} className="w-[500px] mx-auto mt-96" />
           
           <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Package Managers</h1>
           <p className='text-md'>Package managers allow you to manage the dependencies that allow your project to work correctly.
@@ -307,9 +331,9 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={FRAMEWORKS} className="w-[500px] mx-auto mt-96" />
+              <Image id="FRAME" alt="CSS2" src={FRAMEWORKS} className="w-[500px] mx-auto mt-96" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Frameworks</h1>
+          <h1  className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Frameworks</h1>
           <p className='text-md'>Web frameworks are designed to write web applications. Frameworks are collections of libraries that aid in the development of a software product or website. Frameworks for web application development are collections of various tools. Frameworks vary in their capabilities and functions, depending on the tasks set. They define the structure, establish the rules, and provide the development tools required.
 
 Visit the following resources to learn more:</p>
@@ -339,9 +363,9 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={CSSFRAME} className="w-[500px] mx-auto mt-96" />
+              <Image id="CSSFRAME" alt="CSS2" src={CSSFRAME} className="w-[500px] mx-auto mt-96" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>CSS Frameworks</h1>
+          <h1  className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>CSS Frameworks</h1>
           <p className='text-md'>The way we write CSS in our modern front-end applications is completely different from how we used to write CSS before. There are methods such as Styled Components, CSS Modules, Styled JSX, Emotion, etc.
 
 Visit the following resources to learn more:</p>
@@ -371,9 +395,9 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={CSSPRE} className="w-[500px] mx-auto mt-96" />
+              <Image id="CSSPRE" alt="CSS2" src={CSSPRE} className="w-[500px] mx-auto mt-96" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>CSS Preprocessors</h1>
+          <h1  className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>CSS Preprocessors</h1>
           <p className='text-md'>CSS Preprocessors are scripting languages that extend the default capabilities of CSS. They enable us to use logic in our CSS code, such as variables, nesting, inheritance, mixins, functions, and mathematical operations.
 
 Visit the following resources to learn more:</p>
@@ -403,7 +427,7 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={TYPE} className="w-[500px] mx-auto mt-96" />
+              <Image id="TYPE"  alt="CSS2" src={TYPE} className="w-[500px] mx-auto mt-96" />
           
           <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Type Checkers</h1>
           <p className='text-md'>Type checker helps developers write code with fewer bugs by adding types to their code, trying to catch type errors within your code, and then removing them during compile time. Flow and TypeScript are two popular static type checkers for JavaScript however I recommend Typescript.</p>
@@ -423,9 +447,9 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={SSR} className="w-[500px] mx-auto mt-96" />
+              <Image id="SSR" alt="CSS2" src={SSR} className="w-[500px] mx-auto mt-96" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Server Side Rendering</h1>
+          <h1  className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Server Side Rendering</h1>
           <p className='text-md'>Server-side rendering refers to the process that the service side completes the HTML structure splicing of the page, sends it to the browser, and then binds the status and events for it to become a fully interactive page.
 
 Visit the following resources to learn more:</p>
@@ -455,9 +479,9 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="CSS2" src={QL} className="w-[400px] mx-auto mt-96" />
+              <Image id="GRAPH" alt="CSS2" src={QL} className="w-[400px] mx-auto mt-96" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>GraphQL</h1>
+          <h1  className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>GraphQL</h1>
           <p className='text-md'>GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
 
 Visit the following resources to learn more:</p>
@@ -487,9 +511,9 @@ Visit the following resources to learn more:</p>
             
           
          
-              <Image alt="HTML2" src={PERFORM} className="w-[500px] mx-auto mt-96" />
+              <Image id="PBP" alt="HTML2" src={PERFORM} className="w-[500px] mx-auto mt-96" />
           
-          <h1 className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Performance Best Practices</h1>
+          <h1  className=' md:text-3xl sm:text-2xl text-2xl font-bold md:py-6'>Performance Best Practices</h1>
           <p className='text-md'>Use these resources to calculate, measure and improve your websites performance:
 </p>
           <div className="flex flex-wrap justify-center">
@@ -525,7 +549,7 @@ Visit the following resources to learn more:</p>
       PRPL Pattern
     </button>
   </a>
-  
+  </div>
 </div>
           </div>
           </div>
