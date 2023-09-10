@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Image from "next/image";
-import frontend from "../public/Frontend.webp";
+import frontend from "../public/frontend.svg";
 import Link from "next/link";
 import curriculum from "../public/curriculum.svg";
 import HTML from "../public/HTML.webp";
@@ -95,7 +95,7 @@ const [nav, setNav] = useState(true);
       <div className="text-white">
           <div className="maxw-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
         <h1 className='text-gra-300 md:text-4xl sm:text-6xl text-4xl font-bold md:py-6'>A Guide to Front-End Development</h1>
-        <p className='md:text-2xl sm:text-4xl text-xl font-bold py-4'>This guide will take you through each aspect of front-end development.</p>
+        <p className='md:text-2xl sm:text-4xl text-xl font-bold py-4'>This guide will take you through each aspect of front-end development in order.</p>
         <Image alt="aboutimage" src={frontend} className='w-[500px] mx-auto my-4' />
       </div>
       </div>
